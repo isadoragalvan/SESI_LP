@@ -17,7 +17,5 @@ Disciplina de Lógica de Programação SESI 2026
 - `git add .` → adicionar arquivos  
 - `git commit -m "descrição"` → salvar alterações  
 - `git push` → enviar para o GitHub  
-- `git pull` → atualizar projeto  
-
-> *Para alterações manuais*
+- `git pull` → atualizar projeto  > *Para alterações manuais*
 
