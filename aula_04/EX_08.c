@@ -8,4 +8,5 @@ int main(){
         int resultado=num*i;
         printf("%d*%d = %d\n", num, i, resultado);
     }
+    return 0;
 }
