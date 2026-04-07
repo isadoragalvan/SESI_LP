@@ -6,4 +6,5 @@ int main(){
     soma+=i;
     printf("a soma e: %d\n", soma);
  }printf("O resultado final e: %d\n", soma);
+    return 0;
 }

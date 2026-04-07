@@ -7,4 +7,5 @@ int main(){
         printf("%i\n", y);
         y++;
     }
+    return 0;
 }

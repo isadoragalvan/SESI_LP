@@ -6,4 +6,5 @@ int main(){
         printf("%i\n", y);
         y--;
     } while (y>0);
+    return 0;
 }
