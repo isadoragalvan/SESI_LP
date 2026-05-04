@@ -23,6 +23,8 @@ printf("\n");
 	    for(int c=0; c<3; c++){
 	        if(l==c){
 	            printf("| %i |", matriz[l][c]);
+	        }else if(l!=c){
+	            printf("|   |");
 	        }
 	    }
 	    printf("\n");
