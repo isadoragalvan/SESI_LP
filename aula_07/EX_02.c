@@ -58,6 +58,9 @@ int main() {
                 resultado=SubtracaoDeDoisValores(n1, n2);
 	ImprimirValores("\nsubtração", resultado);
 	break;
+	case 0:
+	printf("\nSaindo, tchau!");
+	break;
      default:
                 printf("\nOpcao invalida!\n");
                 break;
