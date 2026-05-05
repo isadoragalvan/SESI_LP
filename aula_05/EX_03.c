@@ -1,35 +1,15 @@
 #include <stdio.h>
 
-int main () {
-
-    int valores[12];
-    int crescente = 1;
-    int decrescente = 1;
-
-    for (int i = 0; i < 12; i++) {
-        printf("Digite o valor %d: ", i + 1);
-        scanf("%d", &valores[i]);
+int main(){
+  
+    int num[8];
+    int soma=0;
+  
+    for (int i = 0; i < 8; i++) {
+        printf("Digite um numero inteiro: ");
+        scanf("%i", &num[i]);
+        soma=soma+num[i];
     }
-
-    for (int i = 0; i < 11; i++) {
-        if (valores[i] < valores[i+1]) {
-            decrescente = 0;
-        }
-        if (valores[i] > valores[i+1]) {
-            crescente = 0;
-        }
-    }
-
-    printf("\nStatus: ");
-    if (crescente == 1 && decrescente == 0) {
-        printf("Ordem Crescente\n");
-    } else if (decrescente == 1 && crescente == 0) {
-        printf("Ordem Decrescente\n");
-    } else if (crescente == 1 && decrescente == 1) {
-        printf("Constante (Numeros iguais)\n");
-    } else {
-        printf("Desordenada\n");
-    }
-
+    printf("O resultado da soma é:%d\n", soma);
     return 0;
 }

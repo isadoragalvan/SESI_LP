@@ -1,38 +1,21 @@
-    #include <stdio.h>
+#include <stdio.h>
 
-int main() {
-    int idade[15];
-    int jovens=0, adultos=0, idosos=0;
+int main()
+{
+    int num[10];
+    int numero;
     
-    for (int i=0; i<15; i++) {
-        printf("Digite a idade da pessoa %d: ", i+1);
-        scanf("%d", &idade[i]);
+    for (int i = 0; i < 10; i++) {
+        printf("Digite um numero inteiro: ");
+        scanf("%i", &num[i]);
+    }
+    printf("Os numeros pares digitados foram:\n");
 
-        if (idade[i] <= 17) {
-            jovens++;
-        } else if (idade[i] <= 59) {
-            adultos++;
-        } else {
-            idosos++;
+    for (int i = 0; i < 10; i++) {
+        if (num[i] % 2 == 0) {
+            printf("%i ", num[i]);
         }
     }
-
-    printf("\n--- Resultado da Pesquisa ---\n");
-    printf("Jovens: %d\n", jovens);
-    printf("Adultos: %d\n", adultos);
-    printf("Idosos: %d\n", idosos);
-
-    printf("\nGrupo com maior quantidade: ");
-    if (jovens > adultos && jovens > idosos) {
-        printf("Jovens\n");
-    } else if (adultos > jovens && adultos > idosos) {
-        printf("Adultos\n");
-    } else if (idosos < jovens && idosos < adultos ) {
-        printf("Idosos\n");
-    } else if ( jovens==adultos && adultos==idosos) {
-        printf("Todos tem a mesma quantidade");
-    }
-    
 
     return 0;
 }

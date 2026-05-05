@@ -2,20 +2,25 @@
 
 int main()
 {
-    int num[10];
-    int numero;
-    
-    for (int i = 0; i < 10; i++) {
-        printf("Digite um numero inteiro: ");
-        scanf("%i", &num[i]);
-    }
-    printf("Os numeros pares digitados foram:\n");
+	int matriz[2][2];
+	int soma = 0;
 
-    for (int i = 0; i < 10; i++) {
-        if (num[i] % 2 == 0) {
-            printf("%i ", num[i]);
-        }
-    }
+	for(int l=0; l < 2; l++) {
+		for(int c=0 ; c< 2; c++) {
+			printf("Digite valor Linha: %i, Coluna: %i: ",l+1,c+1);
+			scanf("%i", &matriz[l][c]);
+		}
 
-    return 0;
+	}
+
+	for(int l=0; l < 2; l++) {
+		for(int c=0 ; c< 2; c++) {
+			printf(" | %i |", matriz[l][c]);
+			soma = soma + matriz[l][c];
+		}
+		printf("\n");
+	}
+	printf("\nA soma de todos os elementos é: %i", soma);
+
+	return 0;
 }

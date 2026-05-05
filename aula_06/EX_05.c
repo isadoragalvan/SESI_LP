@@ -1,19 +1,24 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
+    int matriz[3][3];
+    int soma = 0;
 
-	int num[6];
-	int menor = 1000;
+    for(int l = 0; l < 3; l++) {
+        for(int c = 0; c < 3; c++) {
+            printf("Digite valor Linha: %i, Coluna: %i: ", l+1, c+1);
+            scanf("%i", &matriz[l][c]);
+        }
+    }
 
-	for (int i = 0; i < 6; i++) {
-		printf("Digite um número:");
-		scanf("%i", &num[i]);
-		
-		if(num[i] < menor){
-		    menor = num[i];
-		}
-	}
-	
-	printf("O menor número é:%d\n", menor);
-	return 0;
+    for (int l = 0; l < 3; l++) {
+        soma = 0;
+        for (int c = 0; c < 3; c++) {
+            soma += matriz[l][c];
+        }
+        printf("Soma da linha %d: %d\n", l + 1, soma);
+    }
+
+    return 0;
 }

@@ -1,15 +1,36 @@
 #include <stdio.h>
 
-int main(){
-  
-    int num[8];
-    int soma=0;
-  
-    for (int i = 0; i < 8; i++) {
-        printf("Digite um numero inteiro: ");
-        scanf("%i", &num[i]);
-        soma=soma+num[i];
-    }
-    printf("O resultado da soma é:%d\n", soma);
-    return 0;
+int main()
+{
+	int matriz[3][3];
+
+	for(int l=0; l < 3; l++) {
+		for(int c=0 ; c< 3; c++) {
+			printf("Digite valor Linha: %i, Coluna: %i: ",l+1,c+1);
+			scanf("%i", &matriz[l][c]);
+		}
+
+	}
+
+	for(int l=0; l < 3; l++) {
+		for(int c=0 ; c< 3; c++) {
+			printf(" | %i |", matriz[l][c]);
+		}
+printf("\n");
+	}
+	printf("\nA diagonal principal é:\n");
+	for(int l=0; l<3; l++){
+	    for(int c=0; c<3; c++){
+	        if(l==c){
+	            printf("| %i |", matriz[l][c]);
+	        }else if(l!=c){
+	            printf("|   |");
+	        }
+	    }
+	    printf("\n");
+	}
+	
+
+
+	return 0;
 }

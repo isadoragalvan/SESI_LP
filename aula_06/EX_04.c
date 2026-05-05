@@ -1,19 +1,33 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
+	int matriz[4][4];
 
-	int num[6];
-	int maior = 0;
-
-	for (int i = 0; i < 6; i++) {
-		printf("Digite um número:");
-		scanf("%i", &num[i]);
-		
-		if(num[i]> maior){
-		    maior = num[i];
+	for(int l=0; l < 4; l++) {
+		for(int c=0 ; c< 4; c++) {
+			printf("Digite valor Linha: %i, Coluna: %i: ",l+1,c+1);
+			scanf("%i", &matriz[l][c]);
 		}
+
 	}
-	
-	printf("O maior número é:%d\n", maior);
+	for(int l=0; l < 4; l++) {
+		for(int c=0 ; c< 4; c++) {
+			printf(" | %i |", matriz[l][c]);
+		}
+		printf("\n");
+	}
+	printf("\nOs números maiores que dez são: \n");
+	for(int l=0; l<4; l++) {
+		for(int c=0; c<4; c++) {
+			if(matriz[l][c] > 10) {
+				printf("| %i |", matriz[l][c]);
+			}
+		}
+		printf("\n");
+	}
+
+
+
 	return 0;
 }

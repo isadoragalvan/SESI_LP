@@ -2,28 +2,18 @@
 
 int main()
 {
-    float notas[10], media;
-    float soma = 0;
-    int conta = 0;
+    int num[5];
     
-    for (int i=0; i<10; i++) {
-    printf("Digite a nota do aluno %d: ", i + 1);
-    scanf("%f", &notas[i]);
-        soma+=notas[i];
-    }
-    media=soma/10;
-
-    printf("Media da turma: %.2f\n", media);
-
-    printf("Notas acima da media: ");
-    for (int i=0; i<10; i++) {
-        if (notas[i]>media) {
-            printf("%.1f ", notas[i]);
-            conta++;
-        }
+    for (int i = 0; i < 5; i++) {
+        printf("Digite um numero inteiro: ");
+        scanf("%i", &num[i]);
     }
 
-    printf("\nTotal de alunos acima da media: %d\n", conta);
+    printf("Os numeros digitados foram:\n");
+
+    for (int i = 0; i < 5; i++) {
+        printf("%i ", num[i]);
+    }
 
     return 0;
 }
